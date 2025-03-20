@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analista - Control de Pagos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css"> 
+</head>
+<body class="bg-black">
+
+    <div class="container my-4">
+        
+        <button class="btn btn-outline-gold" onclick="logout()">Cerrar Sesión</button>
+        <h1 class="text-center text-gold mb-4">Control de Pagos - Analista</h1>
+        
+        <!-- Filtros -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="fechaPago" class="form-label text-gold">Filtrar por Fecha de Pago:</label>
+                <input type="date" id="fechaPago" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="tipoPago" class="form-label text-gold">Filtrar por Tipo de Pago:</label>
+                <select id="tipoPago" class="form-control">
+                    <option value="todos">Todos</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="tarjeta">Tarjeta</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Tabla de pagos -->
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID Pago</th>
+                    <th scope="col">Tipo de Pago</th>
+                    <th scope="col">Fecha de Pago</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Efectivo</td>
+                    <td>2025-03-20</td>
+                    <td>Enviada</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Marcar como Pagada</button>
+                        <button class="btn btn-warning btn-sm">Devolver</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Transferencia</td>
+                    <td>2025-03-21</td>
+                    <td>Enviada</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Marcar como Pagada</button>
+                        <button class="btn btn-warning btn-sm">Devolver</button>
+                    </td>
+                </tr>
+                <!-- Más filas pueden ser añadidas-->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="../js/analista.js"></script>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Control de Pagos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css"> 
+</head>
+<body class="bg-black">
+
+    <div class="container my-4">
+        <h1 class="text-center text-gold mb-4">Reportes Analistas</h1>
+        <a href="../html/admin.html">Volver</a>
+        <!-- Filtros para Reportes -->
+        <div class="row mb-3">
+
+            <div class="col-md-4">
+                <label for="reporteAnalista" class="form-label text-gold">Seleccionar Analista:</label>
+                <select id="reporteAnalista" class="form-control">
+                    <option value="todos">Todos</option>
+                    <option value="Analista 1">Analista 1</option>
+                    <option value="Analista 2">Analista 2</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="reporteTipoPago" class="form-label text-gold">Seleccionar Tipo de Pago:</label>
+                <select id="reporteTipoPago" class="form-control">
+                    <option value="todos">Todos</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Tarjeta">Tarjeta</option>
+                </select>
+        </div>
+
+        <!-- Reportes por Analista -->
+        <div class="mb-4">
+            <h4 class="text-gold">Reportes por Analista</h4>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Pago</th>
+                        <th scope="col">Analista</th>
+                        <th scope="col">Tipo de Pago</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha de Pago</th>
+                    </tr>
+                </thead>
+                <tbody id="reporteAnalistaTabla">
+                    <!-- Los datos de los reportes se agregarán dinámicamente aquí -->
+                    <tr>
+                        <td>003</td>
+                        <td>Analista 1</td>
+                        <td>Tarjeta</td>
+                        <td>Pagada</td>
+                        <td>2025-03-22</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Analista 2</td>
+                        <td>Efectivo</td>
+                        <td>Enviada</td>
+                        <td>2025-03-23</td>
+                    </tr>
+                    <!-- Más filas se agregan dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Reportes por Tipo de Pago -->
+        <div class="mb-4">
+            <h4 class="text-gold">Reportes por Tipo de Pago</h4>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Pago</th>
+                        <th scope="col">Tipo de Pago</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha de Pago</th>
+                    </tr>
+                </thead>
+                <tbody id="reporteTipoPagoTabla">
+                    <!-- Los datos de los reportes se agregarán dinámicamente aquí -->
+                    <tr>
+                        <td>005</td>
+                        <td>Efectivo</td>
+                        <td>Pagada</td>
+                        <td>2025-03-24</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Transferencia</td>
+                        <td>Enviada</td>
+                        <td>2025-03-25</td>
+                    </tr>
+                    <!-- Más filas se agregan dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="../js/reportes.js"></script>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

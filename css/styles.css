@@ -1,0 +1,53 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #d4af37;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #d4af37;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b89627;
+}
+
+.btn-outline-gold {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.btn-outline-gold:hover {
+    background-color: #d4af37;
+    color: #000;
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    border: 1px solid #d4af37;
+    color: #fff;
+}
+
+.table-dark {
+    background-color: #1e1e1e;
+    border-color: #d4af37;
+}
+
+.table-dark th, .table-dark td {
+    border-color: #d4af37;
+}
