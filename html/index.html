@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body class="bg-dark text-white">
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card p-4 bg-black text-white" style="width: 350px;">
-            <h2 class="text-center text-gold">Iniciar Sesión</h2>
-            
-            <form id="loginForm">
-                <label class="form-label mt-2">Correo</label>
-                <input type="email" id="email" class="form-control" required>
-
-                <label class="form-label mt-2">Contraseña</label>
-                <input type="password" id="password" class="form-control" required>
-
-                <button type="submit" class="btn btn-gold mt-3 w-100">Ingresar</button>
-                <p id="errorMessage" class="text-danger mt-2 text-center"></p>
-            </form>
-
-            <p class="mt-2 text-center">¿No tienes cuenta? <a href="../html/registro.html" class="text-gold">Regístrate</a></p>
-        </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="login-bg">
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="card login-card">
+        <h2 class="text-center mb-2 login-title">Iniciar Sesión</h2>
+        <p class="text-center login-subtitle">Bienvenido de nuevo</p>
+        <form id="loginForm" class="mt-4">
+          <div class="mb-3">
+            <label for="email" class="form-label login-label"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="form-control login-input"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label login-label"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              id="password"
+              class="form-control login-input"
+              required
+            />
+          </div>
+          <button type="submit" class="btn login-btn w-100 mt-2">
+            Ingresar
+          </button>
+          <p id="errorMessage" class="text-danger text-center mt-2 small"></p>
+        </form>
+        <p class="text-center mt-4 login-footer">
+          ¿No tienes cuenta?
+          <a href="../html/registro.html" class="login-link">Regístrate</a>
+        </p>
+      </div>
     </div>
-
     <script src="../js/login.js"></script>
-</body>
+  </body>
 </html>
