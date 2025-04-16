@@ -1,210 +1,210 @@
 body {
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .login-bg {
-    background: linear-gradient(135deg, #AFDDE5, #ffffff);
-    min-height: 100vh;
-  }
-  
-  .login-card {
-    background: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 15px 40px rgba(0, 49, 53, 0.2);
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-  }
-  
-  .login-title {
-    color: #003135;
-    font-weight: 600;
-  }
-  
-  .login-subtitle {
-    color: #024950;
-    font-size: 0.95rem;
-  }
-  
-  .login-label {
-    font-weight: 500;
-    color: #024950;
-  }
-  
-  .login-input {
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    padding: 0.75rem;
-    font-size: 0.95rem;
-  }
-  
-  .login-input:focus {
-    border-color: #0FA4AF;
-    box-shadow: 0 0 0 0.2rem rgba(15, 164, 175, 0.25);
-  }
-  
-  .login-btn {
-    background-color: #0FA4AF;
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-btn:hover {
-    background-color: #05666d;
-    color: #ffffff;
-  }
-  
-  .login-footer {
-    font-size: 0.9rem;
-    color: #024950;
-  }
-  
-  .login-link {
-    color: #0FA4AF;
-    font-weight: 500;
-    text-decoration: none;
-  }
-  
-  .login-link:hover {
-    color: #0FA4AF;
-    text-decoration: underline;
-  }
-  
-  .card-custom {
-    background-color: #ffffff;
-    border: 1px solid #E0E0E0;
-    border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0, 49, 53, 0.08);
-    padding: 2rem;
-    max-width: 720px;
-    margin: auto;
-  }
-  
-  .text-heading {
-    color: #003135;
-    font-weight: 600;
-  }
+  font-family: 'Inter', sans-serif;
+}
 
-  .nav-heading {
-    color: #ffffff;
-    font-weight: 600;
-  }
+.login-bg {
+  background: linear-gradient(135deg, #AFDDE5, #ffffff);
+  min-height: 100vh;
+}
 
-  .nav-heading:hover {
-    color: #c2faff;
-    font-weight: 600;
-  }
-  
-  .text-subheading {
-    color: #024950;
-    font-weight: 500;
-  }
-  
-  .text-label {
-    color: #024950;
-    font-size: 0.9rem;
-  }
-  
-  .btn-accent {
-    background-color: #0FA4AF;
-    color: #ffffff;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
-    padding: 0.65rem;
-    border: none;
-  }
-  
-  .btn-accent:hover {
-    background-color: #05666d;
-  }
-  
-  .btn-accent-outline {
-    background: transparent;
-    color: #0FA4AF;
-    border: 1px solid #0FA4AF;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-  }
-  
-  .btn-accent-outline:hover {
-    background-color: #0FA4AF;
-    color: #fff;
-  }
+.login-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px rgba(0, 49, 53, 0.2);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
 
-  .btn-devolver {
-    background-color: transparent;
-    color: #964734;
-    border: 1px solid #964734;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 0.4rem 0.75rem;
-    font-size: 0.85rem;
-  }
-  
-  .btn-devolver:hover {
-    background-color: #964734;
-    color: #ffffff;
-  }
-  
-  
-  .nav-custom {
-    background-color: #003135;
-    color: #ffffff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #00272a;
-  }
-  
-  .table-header {
-    background-color: #024950;
-    color: #ffffff;
-  }
-  
-  .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #333;
-    border-collapse: collapse;
-  }
-  
-  .table th,
-  .table td {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-    vertical-align: middle;
-    border-top: 1px solid #dee2e6;
-  }
-  
-  .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
-  }
-  
-  .table-hover tbody tr:hover {
-    background-color: #eaf4f4;
-  }
+.login-title {
+  color: #003135;
+  font-weight: 600;
+}
 
-  .btn-outline-link {
-    background-color: transparent;
-    color: #0FA4AF;
-    border: 1px solid #0FA4AF;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-outline-link:hover {
-    background-color: #0FA4AF;
-    color: #ffffff;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(15, 164, 175, 0.2);
-  }
+.login-subtitle {
+  color: #024950;
+  font-size: 0.95rem;
+}
+
+.login-label {
+  font-weight: 500;
+  color: #024950;
+}
+
+.login-input {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.login-input:focus {
+  border-color: #0FA4AF;
+  box-shadow: 0 0 0 0.2rem rgba(15, 164, 175, 0.25);
+}
+
+.login-btn {
+  background-color: #0FA4AF;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #05666d;
+  color: #ffffff;
+}
+
+.login-footer {
+  font-size: 0.9rem;
+  color: #024950;
+}
+
+.login-link {
+  color: #0FA4AF;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: #0FA4AF;
+  text-decoration: underline;
+}
+
+.card-custom {
+  background-color: #ffffff;
+  border: 1px solid #E0E0E0;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 49, 53, 0.08);
+  padding: 2rem;
+  max-width: 720px;
+  margin: auto;
+}
+
+.text-heading {
+  color: #003135;
+  font-weight: 600;
+}
+
+.nav-heading {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.nav-heading:hover {
+  color: #c2faff;
+  font-weight: 600;
+}
+
+.text-subheading {
+  color: #024950;
+  font-weight: 500;
+}
+
+.text-label {
+  color: #024950;
+  font-size: 0.9rem;
+}
+
+.btn-accent {
+  background-color: #0FA4AF;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  padding: 0.65rem;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #05666d;
+}
+
+.btn-accent-outline {
+  background: transparent;
+  color: #0FA4AF;
+  border: 1px solid #0FA4AF;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.btn-accent-outline:hover {
+  background-color: #0FA4AF;
+  color: #fff;
+}
+
+.btn-devolver {
+  background-color: transparent;
+  color: #964734;
+  border: 1px solid #964734;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.btn-devolver:hover {
+  background-color: #964734;
+  color: #ffffff;
+}
+
+
+.nav-custom {
+  background-color: #003135;
+  color: #ffffff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #00272a;
+}
+
+.table-header {
+  background-color: #024950;
+  color: #ffffff;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #333;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #eaf4f4;
+}
+
+.btn-outline-link {
+  background-color: transparent;
+  color: #0FA4AF;
+  border: 1px solid #0FA4AF;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-link:hover {
+  background-color: #0FA4AF;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(15, 164, 175, 0.2);
+}

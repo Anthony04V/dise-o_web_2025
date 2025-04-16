@@ -105,3 +105,30 @@ actualizarTabla({
     analista: 'todos',
     tipoPago: 'todos'
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contenedor = document.getElementById("reportePorFechaPago");
+    const filtroFecha = document.getElementById("fechaFiltroPago");
+
+    if (!contenedor || !filtroFecha) return;
+
+    filtroFecha.addEventListener("change", function () {
+        const fechaSeleccionada = this.value;
+        contenedor.innerHTML = "";
+
+        const pagos = ordenesPago.filter(o => o.fecha_pago === fechaSeleccionada && o.id_estado === 4);
+
+        pagos.forEach(p => {
+            const tipo = tipoPagoCatalogo.find(tp => tp.id_tipo_pago === p.id_tipo_pago)?.descripcion || "Tipo";
+            const row = document.createElement("li");
+            row.innerHTML = `
+                <strong>${p.id_documento}</strong> | ${p.acreedor} | ${tipo} | Monto: ${p.monto} | Fecha pago: ${p.fecha_pago}
+            `;
+            contenedor.appendChild(row);
+        });
+
+        if (pagos.length === 0) {
+            contenedor.innerHTML = "<li>No hay pagos en esa fecha.</li>";
+        }
+    });
+});
