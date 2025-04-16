@@ -80,3 +80,58 @@ function logout() {
 }
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    function renderReporte(idContenedor, datos, formateador) {
+        const contenedor = document.getElementById(idContenedor);
+        if (!contenedor) return;
+        contenedor.innerHTML = "";
+
+        datos.forEach(item => {
+            const row = document.createElement("li");
+            row.innerHTML = formateador(item);
+            contenedor.appendChild(row);
+        });
+
+        if (datos.length === 0) {
+            contenedor.innerHTML = "<li>No hay registros disponibles.</li>";
+        }
+    }
+
+    // Reporte por coordinador
+    const pagosPorCoordinador = ordenesPago.map(o => ({
+        id_documento: o.id_documento,
+        acreedor: o.acreedor,
+        coordinador: coordinadores.find(c => c.id_coordinador === o.id_coordinador)?.nombre || "Desconocido",
+        estado: estadoCatalogo.find(e => e.id_estado === o.id_estado)?.descripcion || "Desconocido"
+    }));
+    renderReporte("reporteCoordinador", pagosPorCoordinador, d =>
+        `<strong>${d.id_documento}</strong> | ${d.acreedor} | Coordinador: ${d.coordinador} | Estado: ${d.estado}`);
+
+    // Reporte por analista
+    const pagosPorAnalista = ordenesPago.filter(o => o.cedula_analista).map(o => ({
+        id_documento: o.id_documento,
+        acreedor: o.acreedor,
+        analista: analistas.find(a => a.cedula_analista === o.cedula_analista)?.nombre || "Desconocido",
+        estado: estadoCatalogo.find(e => e.id_estado === o.id_estado)?.descripcion || "Desconocido"
+    }));
+    renderReporte("reporteAnalista", pagosPorAnalista, d =>
+        `<strong>${d.id_documento}</strong> | ${d.acreedor} | Analista: ${d.analista} | Estado: ${d.estado}`);
+
+    // Reporte por tipo de pago
+    const pagosPorTipo = ordenesPago.map(o => ({
+        id_documento: o.id_documento,
+        acreedor: o.acreedor,
+        tipo: tipoPagoCatalogo.find(tp => tp.id_tipo_pago === o.id_tipo_pago)?.descripcion || "Desconocido"
+    }));
+    renderReporte("reporteTipoPago", pagosPorTipo, d =>
+        `<strong>${d.id_documento}</strong> | ${d.acreedor} | Tipo de Pago: ${d.tipo}`);
+
+    // Reporte de bitácora
+    renderReporte("reporteBitacora", bitacora, b =>
+        `ID ${b.id} | ${b.transaccion} en ${b.tabla}.${b.columna} | Antes: ${b.valor_antes} | Después: ${b.valor_despues} | Fecha: ${b.fecha_movimiento}`);
+
+    // Reporte de devoluciones
+    renderReporte("reporteDevoluciones", devoluciones, d =>
+        `#${d.id_devolucion} | Documento: ${d.id_documento} | Fecha: ${d.fecha_devolucion} | Devuelto por: ${d.cedula_devuelve}`);
+});

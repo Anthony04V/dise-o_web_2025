@@ -1,5 +1,5 @@
 document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     let username = document.getElementById("email");  // Corregido
     let password = document.getElementById("password");
@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     // Simulación de credenciales correctas
     const users = [
         { user: "coordinador@email.com", pass: "1234", role: "coordinador" },
-        { user: "analista@email.com", pass: "5678", role: "analista" },     
+        { user: "analista@email.com", pass: "5678", role: "analista" },
         { user: "admin@email.com", pass: "admin", role: "admin" },
         { user: "usuario@email.com", pass: "user123", role: "usuario" }
     ];
@@ -37,7 +37,8 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
     if (userFound) {
         localStorage.setItem("role", userFound.role);
-    
+        localStorage.setItem("usuarioActual", userFound.user);
+
         let destino = "";
         if (userFound.role === "coordinador") {
             destino = "dash_coordinador.html";
@@ -48,11 +49,11 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         } else {
             destino = "dashboard.html"; // Puedes definir un destino genérico para otros roles
         }
-    
+
         console.log("Redirigiendo a:", destino);
         window.location.href = destino;
     } else {
         errorMessage.textContent = "Usuario o contraseña incorrectos.";
     }
-    
+
 });
