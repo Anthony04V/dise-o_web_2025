@@ -76,7 +76,7 @@ actualizarLista('tipoDevolucion');
 // Cerrar sesión
 function logout() {
     localStorage.removeItem("role");
-    window.location.href = "index.html";
+    window.location.href = "login.html";
 }
 
 
