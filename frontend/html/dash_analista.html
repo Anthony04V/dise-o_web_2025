@@ -19,9 +19,8 @@
     <nav class="navbar nav-custom">
       <div class="container d-flex justify-content-between align-items-center">
         <h5 class="nav-heading m-0">Control de Pagos</h5>
-        <button class="btn btn-accent-outline" onclick="logout()">
-          Cerrar Sesión
-        </button>
+        <button id="logoutBtn" class="btn btn-accent-outline">Cerrar Sesión</button>
+
       </div>
     </nav>
 
@@ -78,11 +77,14 @@
 
     <script src="../js/data.js"></script>
     <script src="../js/analista.js"></script>
+    
     <script>
-      function logout() {
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("usuarioActual");
         localStorage.removeItem("role");
-        window.location.href = "../index.html";
-      }
+        window.location.href = "login.html";
+      });
     </script>
+    
   </body>
 </html>
